@@ -1,0 +1,64 @@
+AddType text/x-component .htc
+
+RewriteEngine On
+# localhost
+ RewriteBase /narc/
+# live
+# RewriteBase /
+
+#for english
+RewriteRule ^en/audios/page/([0-9]+)$ index.php?action=audios&lan=en&page=$1 [L]
+RewriteRule ^en/audios index.php?action=audios&lan=en [L]
+RewriteRule ^en/videos/page/([0-9]+)$ index.php?action=videos&page=$1&lan=en [L]
+RewriteRule ^en/videos index.php?action=videos&lan=en [L]
+
+RewriteRule ^en/home index.php?lan=en [L]
+#RewriteRule ^en/publications index.php?action=publications [L]
+RewriteRule ^en/bills index.php?action=bills [L]
+#RewriteRule ^en/contact-us index.php?lan=en&action=contact_#us [L]
+RewriteRule ^en/sewakendra.html index.php?lan=en&action=showsewakendra
+RewriteRule ^en/([-A-Za-z0-9]+)$ index.php?lan=en&query=$1 [L]
+RewriteRule ^en index.php?lan=en [L]
+
+
+#for sewakendra
+RewriteRule ^sewakendra/([-A-Za-z0-9]+).html$ index.php?action=showsewakenrasingle&url=$1 [L]
+RewriteRule ^sewakendra.html index.php?action=showsewakendra
+
+RewriteRule ^video-gallery index.php?action=video_gallery [L]
+
+#Audios and Videos url redirect
+RewriteRule ^audios index.php?action=audios [L]
+RewriteRule ^audios/page/([0-9]+)$ index.php?action=audios&page=$1 [L]
+
+RewriteRule ^videos index.php?action=videos [L]
+RewriteRule ^videos/page/([0-9]+)$ index.php?action=videos&page=$1 [L]
+
+RewriteRule ^makelogin index.php?action=make_log_in [L]
+RewriteRule ^forgotpassword index.php?action=forgot_password [L]
+RewriteRule ^home index.php [L]
+
+RewriteRule ^products index.php?action=products [L]
+RewriteRule ^bills.html bills.php [L]
+
+#RewriteRule ^contact-us index.php?action=contact-us [L]
+RewriteRule ^category-([-A-Za-z0-9]+).html$ index.php?url=$1&action=showcategory [L]
+
+# fro TESTIMONIALS and FEEDBACK
+RewriteRule ^testimonials/([-A-Za-z]+)/([-A-Za-z0-9]+)$ index.php?action=testimonials&$1=$2 [L]
+RewriteRule ^testimonials index.php?action=testimonials [L]
+
+RewriteRule ^feedback/([-A-Za-z]+)/([-A-Za-z0-9]+)$ index.php?action=feedback&$1=$2 [L]
+RewriteRule ^feedback index.php?action=feedback [L]
+
+RewriteRule ^([-A-Za-z0-9]+)/page/([0-9]+)$ index.php?query=$1&page=$2 [L]
+RewriteRule ^([-A-Za-z0-9])+$ index.php?query=$0 [L]
+#RewriteRule index.html$ index.php [L]
+
+RewriteRule video_gallery index.php?action=video_gallery [L]
+
+#RewriteRule ^gallery/([0-9]+)\.html$ index.php?galleryId=$1 [L]
+#RewriteRule ^testimonials/([-A-Za-z0-9]+)\.html$ index.php?action=testimonials&$1 [L]
+#RewriteRule ^search/([-A-Za-z0-9]+)/([0-9])\.html$ index.php?action=search&keyword=$1&page=$2 [L]
+#RewriteRule ^([-A-Za-z0-9]+)/([-A-Za-z0-9]+)\.html$ index.php?action=$1&title=$2 [L]
+#RewriteRule ^([-A-Za-z0-9]+)\.html$ index.php?title=$1 [L]

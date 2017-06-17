@@ -1,0 +1,7 @@
+#nav-main .nav-main li ul{width: 200px; position: fixed; background: linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.15) 100%)}
+#nav-main .nav-main li ul li{float: none;border-bottom: 1px solid #006c00;}
+#nav-main .nav-main li ul li a{padding: 6px 14px}
+#nav-main .nav-main li ul li a{background: #2A5A8E}
+#nav-main .nav-main li ul ul{margin-left: 200px;margin-top: -36px}
+
+#nav-main .nav-main li ul li:hover{border-right: 1px solid #006c00}
